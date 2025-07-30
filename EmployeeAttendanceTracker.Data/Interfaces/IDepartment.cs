@@ -16,6 +16,8 @@ namespace EmployeeAttendanceTracker.Repo.Interfaces
         Task DeleteAsync(int id);
         Task<bool> IsNameUniqueAsync(string name, int? excludeId = null);
         Task<bool> IsCodeUniqueAsync(string code, int? excludeId = null);
+        Task<IEnumerable<Department>> GetForDropdownAsync();
+
         Task SaveChangesAsync();
     }
 }
